@@ -1,5 +1,9 @@
 {
   "HomePage": {
-    "title": "Kaiyn"
+    "title": "Kaiyn",
+    "headline": "Web3 trading community",
+    "subtitle": "Meet the community for professional crypto trading. Connect with experts and trade with full confidence.",
+    "joinCommunity": "Join our community",
+    "trustedBy": "Trusted by 3000+ users"
   }
 }

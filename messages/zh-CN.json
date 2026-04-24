@@ -1,5 +1,9 @@
 {
   "HomePage": {
-    "title": "Kaiyn"
+    "title": "Kaiyn",
+    "headline": "Web3 交易社区",
+    "subtitle": "结识专业加密货币交易社区,与高手一同交流,自信交易。",
+    "joinCommunity": "加入我们的社区",
+    "trustedBy": "3000+ 位用户信赖"
   }
 }
