@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "biome check",
-    "format": "biome format --write"
+    "format": "biome format --write",
+    "clean": "rm -rf .next .turbo out node_modules/.cache tsconfig.tsbuildinfo",
+    "clean:all": "pnpm clean && rm -rf node_modules && pnpm install"
   },
   "dependencies": {
     "@base-ui/react": "^1.4.1",
