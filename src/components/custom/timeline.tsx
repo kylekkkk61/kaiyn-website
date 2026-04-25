@@ -8,6 +8,7 @@ import {
   Users,
 } from "lucide-react";
 import { motion, useScroll, useTransform } from "motion/react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useRef } from "react";
 
@@ -126,7 +127,7 @@ const Timeline = () => {
                       </div>
                       <div className="relative grid grid-cols-[auto_1fr_auto] items-stretch">
                         <DiagonalPattern className="h-full w-6 lg:w-10" />
-                        <img
+                        <Image
                           src={item.image.src}
                           width={400}
                           height={500}
