@@ -1,6 +1,8 @@
 "use client";
 
+import { useInView } from "motion/react";
 import Image from "next/image";
+import { useRef } from "react";
 import { AnimatedMessageList } from "@/components/custom/animated-message-list";
 import { cn } from "@/lib/utils";
 
@@ -68,13 +70,21 @@ function ChatMessage({ author, text }: Omit<MessageData, "id">) {
 }
 
 export function AnimatedMessagesBackground() {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    <div className="absolute inset-x-2 top-4 flex h-[300px] flex-col overflow-hidden px-2 pt-2 pb-12 [mask-image:linear-gradient(to_bottom,transparent_10%,#000_100%)]">
-      <AnimatedMessageList delay={1500} className="flex-1 items-start">
-        {messages.map((item) => (
-          <ChatMessage key={item.id} author={item.author} text={item.text} />
-        ))}
-      </AnimatedMessageList>
+    <div
+      ref={ref}
+      className="absolute inset-x-2 top-4 flex h-[300px] flex-col overflow-hidden px-2 pt-2 pb-12 [mask-image:linear-gradient(to_bottom,transparent_10%,#000_100%)]"
+    >
+      {isInView && (
+        <AnimatedMessageList delay={1500} className="flex-1 items-start">
+          {messages.map((item) => (
+            <ChatMessage key={item.id} author={item.author} text={item.text} />
+          ))}
+        </AnimatedMessageList>
+      )}
     </div>
   );
 }

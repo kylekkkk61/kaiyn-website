@@ -1,7 +1,9 @@
 "use client";
 
+import { useInView } from "motion/react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { useRef } from "react";
 import { AnimatedList } from "@/components/ui/animated-list";
 import { cn } from "@/lib/utils";
 
@@ -93,13 +95,21 @@ function Notification({ coin, timeframe, entry, time }: NotificationData) {
 }
 
 export function AnimatedNotificationsBackground() {
+  const ref = useRef<HTMLDivElement>(null);
+  const isInView = useInView(ref, { once: true });
+
   return (
-    <div className="absolute inset-x-2 top-4 flex h-[300px] flex-col overflow-hidden p-2 [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)]">
-      <AnimatedList delay={1500}>
-        {notifications.map((item) => (
-          <Notification key={item.coin + item.timeframe} {...item} />
-        ))}
-      </AnimatedList>
+    <div
+      ref={ref}
+      className="absolute inset-x-2 top-4 flex h-[300px] flex-col overflow-hidden p-2 [mask-image:linear-gradient(to_top,transparent_10%,#000_100%)]"
+    >
+      {isInView && (
+        <AnimatedList delay={1500}>
+          {notifications.map((item) => (
+            <Notification key={item.coin + item.timeframe} {...item} />
+          ))}
+        </AnimatedList>
+      )}
     </div>
   );
 }
