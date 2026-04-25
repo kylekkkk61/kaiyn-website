@@ -13,6 +13,7 @@ import { useTranslations } from "next-intl";
 import { useRef } from "react";
 
 import { Badge } from "@/components/ui/badge";
+import { TextAnimate } from "@/components/ui/text-animate";
 import { cn } from "@/lib/utils";
 
 const STEPS = [
@@ -79,7 +80,7 @@ const Timeline = () => {
 
       <div
         ref={ref}
-        className="relative mx-auto w-full max-w-7xl px-(--page-inline) pb-40 lg:border-x lg:pt-20 [&>*:last-child]:pb-20 [&>div>div:first-child]:pt-20!"
+        className="relative mx-auto w-full max-w-7xl px-(--page-inline) pb-12 lg:border-x lg:pt-20 [&>*:last-child]:pb-20 [&>div>div:first-child]:pt-20!"
       >
         <div className="pointer-events-none absolute top-0 z-0 h-full w-[3px] translate-x-5 lg:left-1/2 lg:-translate-x-1/2">
           <div className="h-4 w-[3px] bg-linear-to-b from-transparent to-foreground/10"></div>
@@ -99,7 +100,14 @@ const Timeline = () => {
                 className={`flex w-full justify-center px-1 py-10 text-end md:gap-6 lg:gap-10 ${item?.reverse ? "lg:flex-row-reverse lg:text-start" : ""} `}
               >
                 <div className="flex-1 max-lg:hidden">
-                  <h3 className="text-2xl tracking-[-0.96px]">{title}</h3>
+                  <TextAnimate
+                    as="h3"
+                    animation="blurInUp"
+                    by="word"
+                    className="text-2xl tracking-[-0.96px]"
+                  >
+                    {title}
+                  </TextAnimate>
                   <p
                     className={`mt-2.5 max-w-[300px] tracking-[-0.32px] text-balance text-muted-foreground ${item?.reverse ? "" : "ml-auto"}`}
                   >
@@ -115,7 +123,14 @@ const Timeline = () => {
                 </div>
                 <div className="flex-1 max-lg:-translate-x-4">
                   <div className="text-start lg:pointer-events-none lg:hidden">
-                    <h3 className="text-2xl tracking-[-0.96px]">{title}</h3>
+                    <TextAnimate
+                      as="h3"
+                      animation="blurInUp"
+                      by="word"
+                      className="text-2xl tracking-[-0.96px]"
+                    >
+                      {title}
+                    </TextAnimate>
                     <p className="mt-2.5 mb-10 max-w-[300px] tracking-[-0.32px] text-balance text-muted-foreground">
                       {description}
                     </p>
