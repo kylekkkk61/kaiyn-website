@@ -4,6 +4,15 @@
     "headline": "Web3 交易社区",
     "subtitle": "结识专业加密货币交易社区,与高手一同交流,自信交易。",
     "joinCommunity": "加入我们的社区",
-    "trustedBy": "3000+ 位用户信赖"
+    "trustedBy": "3000+ 位用户信赖",
+    "bullishSignal": "看涨讯号",
+    "entry": "进场点位",
+    "learnMore": "了解更多",
+    "cards": {
+      "telegramSignal": {
+        "title": "Telegram 信号",
+        "description": "即时交易信号通知，领先每一次市场波动。"
+      }
+    }
   }
 }

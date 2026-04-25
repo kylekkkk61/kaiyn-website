@@ -4,6 +4,15 @@
     "headline": "Web3 trading community",
     "subtitle": "Meet the community for professional crypto trading. Connect with experts and trade with full confidence.",
     "joinCommunity": "Join our community",
-    "trustedBy": "Trusted by 3000+ users"
+    "trustedBy": "Trusted by 3000+ users",
+    "bullishSignal": "Bullish Signal",
+    "entry": "Entry",
+    "learnMore": "Learn more",
+    "cards": {
+      "telegramSignal": {
+        "title": "Telegram Signal",
+        "description": "Instant trading signal alerts. Stay ahead of every market move."
+      }
+    }
   }
 }
