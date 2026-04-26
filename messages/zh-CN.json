@@ -62,7 +62,19 @@
         },
         "kycDeposit": {
           "title": "完成 KYC 与入金",
-          "description": "于合作交易所完成 KYC 身份验证并进行首次入金,即可开始交易。"
+          "description": "于合作交易所完成 KYC 身份验证并进行首次入金,即可开始交易。",
+          "card": {
+            "title": "发送 USDT",
+            "kycBadge": "KYC 已验证",
+            "network": "TRC20 (Tron 网络)",
+            "fromName": "我的钱包",
+            "toName": "Bitget",
+            "feeLabel": "网络手续费",
+            "feeValue": "~ 1.00 USDT",
+            "arrivalLabel": "预计到账",
+            "arrivalValue": "~ 1 分钟",
+            "submitButton": "确认转账"
+          }
         },
         "contactAdmin": {
           "title": "联系管理员",

@@ -17,6 +17,7 @@ import {
 } from "@/components/custom/timeline";
 
 import { BitgetRegisterCard, REGISTER_URL } from "./bitget-register-card";
+import { BlockchainTransferCard } from "./blockchain-transfer-card";
 import { TelegramPreviewCard } from "./telegram-preview-card";
 
 const BINANCE_URL = "https://www.binance.com/join?ref=148898758";
@@ -36,15 +37,7 @@ const STEPS = [
   {
     key: "kycDeposit",
     icon: ShieldCheck,
-    media: (
-      <Image
-        src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-3.svg"
-        width={400}
-        height={500}
-        alt=""
-        className="object-contain dark:invert"
-      />
-    ),
+    media: <BlockchainTransferCard />,
   },
   {
     key: "contactAdmin",

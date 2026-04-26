@@ -62,7 +62,19 @@
         },
         "kycDeposit": {
           "title": "Finish KYC & Deposit",
-          "description": "Complete KYC verification on the partner exchange and make your first deposit to start trading."
+          "description": "Complete KYC verification on the partner exchange and make your first deposit to start trading.",
+          "card": {
+            "title": "Send USDT",
+            "kycBadge": "KYC verified",
+            "network": "TRC20 (Tron Network)",
+            "fromName": "My Wallet",
+            "toName": "Bitget",
+            "feeLabel": "Network Fee",
+            "feeValue": "~ 1.00 USDT",
+            "arrivalLabel": "Estimated Arrival",
+            "arrivalValue": "~ 1 min",
+            "submitButton": "Confirm Transfer"
+          }
         },
         "contactAdmin": {
           "title": "Contact our admin",
