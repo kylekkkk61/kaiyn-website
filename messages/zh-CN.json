@@ -63,6 +63,9 @@
         "kycDeposit": {
           "title": "完成 KYC 与入金",
           "description": "于合作交易所完成 KYC 身份验证并进行首次入金,即可开始交易。",
+          "cta": {
+            "label": "询问如何 KYC 与入金"
+          },
           "card": {
             "title": "发送 USDT",
             "kycBadge": "KYC 已验证",

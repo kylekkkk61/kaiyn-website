@@ -63,6 +63,9 @@
         "kycDeposit": {
           "title": "Finish KYC & Deposit",
           "description": "Complete KYC verification on the partner exchange and make your first deposit to start trading.",
+          "cta": {
+            "label": "Ask how to KYC & deposit"
+          },
           "card": {
             "title": "Send USDT",
             "kycBadge": "KYC verified",

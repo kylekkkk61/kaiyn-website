@@ -102,6 +102,13 @@ const Timeline = () => {
               />
             </div>
           )}
+          {item.key === "kycDeposit" && (
+            <FeatureLink
+              href="https://t.me/ronload"
+              label={t("steps.kycDeposit.cta.label")}
+              color="#22c55e"
+            />
+          )}
         </TimelineStep>
       ))}
     </TimelineLayout>
