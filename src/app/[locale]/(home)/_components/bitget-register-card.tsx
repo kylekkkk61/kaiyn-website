@@ -63,7 +63,7 @@ export function BitgetRegisterCard() {
         <button
           type="button"
           onClick={() => setShowInvite((prev) => !prev)}
-          className="flex items-center justify-between text-xs text-muted-foreground transition-colors hover:text-foreground sm:text-sm"
+          className="flex items-center justify-between text-[11px] text-muted-foreground transition-colors hover:text-foreground sm:text-xs"
         >
           <span>{t("inviteLabel")}</span>
           {showInvite ? (
