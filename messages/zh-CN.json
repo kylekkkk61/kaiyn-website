@@ -37,6 +37,12 @@
         "registerExchange": {
           "title": "注册合作交易所",
           "description": "通过我们的专属邀请链接注册合作交易所账户,解锁社区专属福利。",
+          "cta1": {
+            "label": "在 <brand>Bitget</brand> 注册账户"
+          },
+          "cta2": {
+            "label": "在 <brand>Binance</brand> 注册账户"
+          },
           "card": {
             "emailLabel": "电子邮箱/手机号码",
             "emailPlaceholder": "电子邮箱/手机号码",

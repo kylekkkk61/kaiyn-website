@@ -37,6 +37,12 @@
         "registerExchange": {
           "title": "Register Partner Exchange",
           "description": "Create your partner exchange account through our exclusive referral link to unlock community benefits.",
+          "cta1": {
+            "label": "Create account on <brand>Bitget</brand>"
+          },
+          "cta2": {
+            "label": "Create account on <brand>Binance</brand>"
+          },
           "card": {
             "emailLabel": "Email / Phone number",
             "emailPlaceholder": "Email / Phone number",

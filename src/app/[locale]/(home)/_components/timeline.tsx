@@ -16,8 +16,10 @@ import {
   TimelineStep,
 } from "@/components/custom/timeline";
 
-import { BitgetRegisterCard } from "./bitget-register-card";
+import { BitgetRegisterCard, REGISTER_URL } from "./bitget-register-card";
 import { TelegramPreviewCard } from "./telegram-preview-card";
+
+const BINANCE_URL = "https://www.binance.com/join?ref=148898758";
 
 const STEPS = [
   {
@@ -84,6 +86,28 @@ const Timeline = () => {
               label={t("steps.joinCommunity.cta.label")}
               color="#2AABEE"
             />
+          )}
+          {item.key === "registerExchange" && (
+            <div className="flex flex-col items-start gap-3">
+              <FeatureLink
+                href={REGISTER_URL}
+                label={t.rich("steps.registerExchange.cta1.label", {
+                  brand: (chunks) => (
+                    <span style={{ color: "#00E0FE" }}>{chunks}</span>
+                  ),
+                })}
+                color="#00E0FE"
+              />
+              <FeatureLink
+                href={BINANCE_URL}
+                label={t.rich("steps.registerExchange.cta2.label", {
+                  brand: (chunks) => (
+                    <span style={{ color: "#F0B90B" }}>{chunks}</span>
+                  ),
+                })}
+                color="#F0B90B"
+              />
+            </div>
           )}
         </TimelineStep>
       ))}

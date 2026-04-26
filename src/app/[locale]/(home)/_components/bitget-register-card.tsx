@@ -14,8 +14,7 @@ import { type ReactNode, useState } from "react";
 
 import { cn } from "@/lib/utils";
 
-const REGISTER_URL =
-  "https://www.bitget.site/zh-TC/expressly?channelCode=ue94&vipCode=5nmb&languageType=5";
+export const REGISTER_URL = "https://partner.bitget.com/bg/JZQT5S";
 
 const externalLinkProps = {
   href: REGISTER_URL,
