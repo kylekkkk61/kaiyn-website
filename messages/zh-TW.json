@@ -81,7 +81,16 @@
         },
         "contactAdmin": {
           "title": "聯繫管理員",
-          "description": "聯繫我們的管理員,取得私密訊號群組與專屬資源的存取權限。"
+          "description": "聯繫我們的管理員,取得私密訊號群組與專屬資源的存取權限。",
+          "cta": {
+            "label": "聯繫管理員"
+          },
+          "card": {
+            "adminName": "Kaiyn Admin",
+            "adminStatus": "在線",
+            "userMessage": "請問如何免費加入私人策略群？",
+            "adminMessage": "只要提供給我你的交易所 UID 並等待我完成審核即可。"
+          }
         }
       }
     },

@@ -81,7 +81,16 @@
         },
         "contactAdmin": {
           "title": "联系管理员",
-          "description": "联系我们的管理员,获取私密信号群组与专属资源的访问权限。"
+          "description": "联系我们的管理员,获取私密信号群组与专属资源的访问权限。",
+          "cta": {
+            "label": "联系管理员"
+          },
+          "card": {
+            "adminName": "Kaiyn Admin",
+            "adminStatus": "在线",
+            "userMessage": "请问如何免费加入私人策略群？",
+            "adminMessage": "只要提供给我你的交易所 UID 并等待我完成审核即可。"
+          }
         }
       }
     },

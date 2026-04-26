@@ -81,7 +81,16 @@
         },
         "contactAdmin": {
           "title": "Contact our admin",
-          "description": "Reach out to our admin to gain access to the private signal group and exclusive resources."
+          "description": "Reach out to our admin to gain access to the private signal group and exclusive resources.",
+          "cta": {
+            "label": "Contact admin"
+          },
+          "card": {
+            "adminName": "Kaiyn Admin",
+            "adminStatus": "Online",
+            "userMessage": "How can I join the private strategy group for free?",
+            "adminMessage": "Just send me your exchange UID and wait for the review to complete."
+          }
         }
       }
     },

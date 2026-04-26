@@ -7,7 +7,6 @@ import {
   UserPlus,
   Users,
 } from "lucide-react";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 import { FeatureLink } from "@/components/custom/feature-link";
@@ -18,6 +17,7 @@ import {
 
 import { BitgetRegisterCard, REGISTER_URL } from "./bitget-register-card";
 import { BlockchainTransferCard } from "./blockchain-transfer-card";
+import { ContactAdminCard } from "./contact-admin-card";
 import { TelegramPreviewCard } from "./telegram-preview-card";
 
 const BINANCE_URL = "https://www.binance.com/join?ref=148898758";
@@ -42,15 +42,7 @@ const STEPS = [
   {
     key: "contactAdmin",
     icon: MessageCircle,
-    media: (
-      <Image
-        src="https://deifkwefumgah.cloudfront.net/shadcnblocks/block/placeholder-4.svg"
-        width={400}
-        height={500}
-        alt=""
-        className="object-contain dark:invert"
-      />
-    ),
+    media: <ContactAdminCard />,
     reverse: true,
   },
 ];
@@ -107,6 +99,13 @@ const Timeline = () => {
               href="https://t.me/ronload"
               label={t("steps.kycDeposit.cta.label")}
               color="#22c55e"
+            />
+          )}
+          {item.key === "contactAdmin" && (
+            <FeatureLink
+              href="https://t.me/ronload"
+              label={t("steps.contactAdmin.cta.label")}
+              color="#5865F2"
             />
           )}
         </TimelineStep>
