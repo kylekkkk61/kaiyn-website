@@ -22,7 +22,6 @@
     "hooks": "@/hooks"
   },
   "registries": {
-    "@magicui": "https://magicui.design/r/{name}",
-    "@bundui": "https://bundui.io/r/{name}.json"
+    "@magicui": "https://magicui.design/r/{name}"
   }
 }
