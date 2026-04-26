@@ -14,6 +14,15 @@ import { type ReactNode, useState } from "react";
 
 import { cn } from "@/lib/utils";
 
+const REGISTER_URL =
+  "https://www.bitget.site/zh-TC/expressly?channelCode=ue94&vipCode=5nmb&languageType=5";
+
+const externalLinkProps = {
+  href: REGISTER_URL,
+  target: "_blank" as const,
+  rel: "noopener noreferrer",
+};
+
 export function BitgetRegisterCard() {
   const t = useTranslations("HomePage.timeline.steps.registerExchange.card");
   const [showInvite, setShowInvite] = useState(false);
@@ -24,25 +33,31 @@ export function BitgetRegisterCard() {
         <span className="text-[11px] text-muted-foreground sm:text-xs">
           {t("emailLabel")}
         </span>
-        <div className="flex items-center gap-2 rounded-full border border-border bg-muted/30 px-3 py-2.5">
+        <a
+          {...externalLinkProps}
+          className="flex items-center gap-2 rounded-full border border-border bg-muted/30 px-3 py-2.5 transition-colors hover:bg-muted/50"
+        >
           <Mail className="size-4 shrink-0 text-muted-foreground" />
           <span className="truncate text-xs text-muted-foreground/70 sm:text-sm">
             {t("emailPlaceholder")}
           </span>
-        </div>
+        </a>
       </div>
 
       <div className="flex flex-col gap-1.5">
         <span className="text-[11px] text-muted-foreground sm:text-xs">
           {t("passwordLabel")}
         </span>
-        <div className="flex items-center gap-2 rounded-full border border-border bg-muted/30 px-3 py-2.5">
+        <a
+          {...externalLinkProps}
+          className="flex items-center gap-2 rounded-full border border-border bg-muted/30 px-3 py-2.5 transition-colors hover:bg-muted/50"
+        >
           <Lock className="size-4 shrink-0 text-muted-foreground" />
           <span className="flex-1 truncate text-xs text-muted-foreground/70 sm:text-sm">
             {t("passwordPlaceholder")}
           </span>
           <Eye className="size-4 shrink-0 text-muted-foreground" />
-        </div>
+        </a>
       </div>
 
       <div className="flex flex-col gap-2">
@@ -59,14 +74,14 @@ export function BitgetRegisterCard() {
           )}
         </button>
         {showInvite && (
-          <div className="flex items-center gap-2 rounded-md border border-border bg-muted/30 px-3 py-2.5">
-            <input
-              type="text"
-              value="5nmb"
-              readOnly
-              className="w-full bg-transparent text-xs text-muted-foreground/70 outline-none sm:text-sm"
-            />
-          </div>
+          <a
+            {...externalLinkProps}
+            className="flex items-center gap-2 rounded-full border border-border bg-muted/30 px-3 py-2.5 transition-colors hover:bg-muted/50"
+          >
+            <span className="w-full truncate text-xs text-muted-foreground/70 sm:text-sm">
+              5nmb
+            </span>
+          </a>
         )}
       </div>
 
@@ -79,12 +94,12 @@ export function BitgetRegisterCard() {
         </p>
       </div>
 
-      <button
-        type="button"
-        className="rounded-full bg-primary py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
+      <a
+        {...externalLinkProps}
+        className="rounded-full bg-primary py-2.5 text-center text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
       >
         {t("submitButton")}
-      </button>
+      </a>
 
       <div className="flex items-center gap-3">
         <div className="h-px flex-1 bg-border" />
@@ -95,24 +110,27 @@ export function BitgetRegisterCard() {
       </div>
 
       <div className="flex justify-center items-center gap-2">
-        <IconButton ariaLabel={t("google")} className="size-10">
+        <IconLink ariaLabel={t("google")} className="size-10">
           <GoogleIcon className="size-4" />
-        </IconButton>
-        <IconButton ariaLabel={t("apple")} className="size-10">
+        </IconLink>
+        <IconLink ariaLabel={t("apple")} className="size-10">
           <AppleIcon className="size-4 text-foreground" />
-        </IconButton>
-        <IconButton ariaLabel={t("wallet")} className="h-10 gap-1.5 px-3">
+        </IconLink>
+        <IconLink ariaLabel={t("wallet")} className="h-10 gap-1.5 px-3">
           <Wallet className="size-4 text-muted-foreground" />
           <MetaMaskIcon className="size-4" />
           <ChevronRight className="size-4 text-muted-foreground" />
-        </IconButton>
+        </IconLink>
       </div>
 
       <p className="text-center text-[11px] text-muted-foreground sm:text-xs">
         {t("haveAccount")}{" "}
-        <span className="cursor-pointer font-medium text-primary">
+        <a
+          {...externalLinkProps}
+          className="font-medium text-primary hover:brightness-110"
+        >
           {t("goLogin")}
-        </span>
+        </a>
       </p>
 
       <div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-neutral-800/10" />
@@ -120,7 +138,7 @@ export function BitgetRegisterCard() {
   );
 }
 
-function IconButton({
+function IconLink({
   children,
   ariaLabel,
   className,
@@ -130,8 +148,10 @@ function IconButton({
   className?: string;
 }) {
   return (
-    <button
-      type="button"
+    <a
+      href={REGISTER_URL}
+      target="_blank"
+      rel="noopener noreferrer"
       aria-label={ariaLabel}
       className={cn(
         "flex items-center justify-center rounded-full border border-border bg-card transition-colors hover:bg-muted/50",
@@ -139,7 +159,7 @@ function IconButton({
       )}
     >
       {children}
-    </button>
+    </a>
   );
 }
 

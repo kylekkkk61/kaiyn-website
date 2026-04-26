@@ -1,5 +1,5 @@
-import type { CSSProperties } from "react";
 import { ChevronRight } from "lucide-react";
+import type { CSSProperties } from "react";
 
 type FeatureLinkProps = {
   href: string;
