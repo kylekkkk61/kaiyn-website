@@ -1,8 +1,8 @@
 import { useTranslations } from "next-intl";
+import { BentoCard } from "@/components/custom/bento-card";
 import { Container } from "@/components/layout/container";
 import { AnimatedMessagesBackground } from "./animated-messages";
 import { AnimatedNotificationsBackground } from "./animated-notifications";
-import { BentoCard } from "./bento-card";
 import { ConceptCardsMarqueeBackground } from "./concept-cards-marquee";
 
 export function FeatureCards() {

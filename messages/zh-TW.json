@@ -1,4 +1,28 @@
 {
+  "Nav": {
+    "start": "開始",
+    "tutorial": "教學"
+  },
+  "TutorialPage": {
+    "title": "交易教學",
+    "description": "學習 ICT/SMC、價格行為與實戰方法，提升到專業交易水準。",
+    "cards": {
+      "ictSmc": {
+        "title": "ICT / SMC",
+        "description": "完整解析 Inner Circle Trader 與 Smart Money Concepts，從市場結構到進場模型一次掌握。",
+        "cta": "開始閱讀"
+      }
+    }
+  },
+  "TutorialChapter": {
+    "previousLabel": "上一章",
+    "nextLabel": "下一章",
+    "tableOfContents": "本頁目錄",
+    "chapters": "章節",
+    "chaptersMobileTrigger": "全部章節",
+    "closeChapters": "關閉",
+    "currentChapter": "當前章節"
+  },
   "HomePage": {
     "title": "Kaiyn",
     "headline": "深入 Web3，掌握市場先機",

@@ -1,4 +1,28 @@
 {
+  "Nav": {
+    "start": "Start",
+    "tutorial": "Tutorial"
+  },
+  "TutorialPage": {
+    "title": "Trading Tutorial",
+    "description": "Learn ICT/SMC, price action, and practical methods to elevate your trading to a professional level.",
+    "cards": {
+      "ictSmc": {
+        "title": "ICT / SMC",
+        "description": "A complete walk-through of Inner Circle Trader and Smart Money Concepts, from market structure to entry models.",
+        "cta": "Start reading"
+      }
+    }
+  },
+  "TutorialChapter": {
+    "previousLabel": "Previous",
+    "nextLabel": "Next",
+    "tableOfContents": "On This Page",
+    "chapters": "Chapters",
+    "chaptersMobileTrigger": "All chapters",
+    "closeChapters": "Close",
+    "currentChapter": "Current chapter"
+  },
   "HomePage": {
     "title": "Kaiyn",
     "headline": "Dive deeper in Web3",

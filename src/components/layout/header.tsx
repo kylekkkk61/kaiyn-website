@@ -1,12 +1,21 @@
 "use client";
 
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import { Container } from "@/components/layout/container";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
+import {
+  NavigationMenu,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
 import { Link } from "@/i18n/navigation";
 
 export function Header() {
+  const t = useTranslations("Nav");
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -41,6 +50,26 @@ export function Header() {
             Kaiyn<span className="text-muted-foreground">Capital</span>
           </span>
         </Link>
+        <NavigationMenu>
+          <NavigationMenuList>
+            <NavigationMenuItem>
+              <NavigationMenuLink
+                className={navigationMenuTriggerStyle()}
+                render={<Link href="/#start" />}
+              >
+                {t("start")}
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuLink
+                className={navigationMenuTriggerStyle()}
+                render={<Link href="/tutorial" />}
+              >
+                {t("tutorial")}
+              </NavigationMenuLink>
+            </NavigationMenuItem>
+          </NavigationMenuList>
+        </NavigationMenu>
         <LanguageSwitcher />
       </Container>
     </header>

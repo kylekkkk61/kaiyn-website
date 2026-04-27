@@ -10,7 +10,9 @@ export default function Home() {
       <Hero />
       <ExchangeLogosMarquee />
       <FeatureCards />
-      <Timeline />
+      <div id="start" className="scroll-mt-20">
+        <Timeline />
+      </div>
       <PreFooter />
     </>
   );
