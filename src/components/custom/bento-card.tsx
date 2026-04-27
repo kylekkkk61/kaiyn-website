@@ -21,15 +21,14 @@ export function BentoCard({
   const hasContent = Boolean(title || description);
   const hasCta = Boolean(cta && href);
 
-  return (
-    <div
-      className={cn(
-        "group relative col-span-3 flex flex-col justify-between overflow-hidden rounded-3xl bg-background transform-gpu lg:col-span-1",
-        "[border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
-        className,
-      )}
-      {...props}
-    >
+  const containerClassName = cn(
+    "group relative col-span-3 flex flex-col justify-between overflow-hidden rounded-3xl bg-background transform-gpu lg:col-span-1",
+    "[border:1px_solid_rgba(255,255,255,.1)] [box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]",
+    className,
+  );
+
+  const inner = (
+    <>
       <div>{background}</div>
       {hasContent && (
         <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 transition-all duration-300 group-hover:-translate-y-10">
@@ -43,10 +42,7 @@ export function BentoCard({
       )}
       {hasCta && (
         <div className="pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-          <a
-            href={href}
-            className="pointer-events-auto inline-flex h-8 items-center justify-center gap-2 whitespace-nowrap rounded-md px-3 font-medium text-xs transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring"
-          >
+          <span className="inline-flex h-8 items-center justify-center gap-2 whitespace-nowrap rounded-md px-3 font-medium text-xs">
             {cta}
             <svg
               width="15"
@@ -65,10 +61,24 @@ export function BentoCard({
                 clipRule="evenodd"
               />
             </svg>
-          </a>
+          </span>
         </div>
       )}
       <div className="pointer-events-none absolute inset-0 transform-gpu transition-all duration-300 group-hover:bg-neutral-800/10" />
+    </>
+  );
+
+  if (href) {
+    return (
+      <a href={href} className={containerClassName}>
+        {inner}
+      </a>
+    );
+  }
+
+  return (
+    <div className={containerClassName} {...props}>
+      {inner}
     </div>
   );
 }
